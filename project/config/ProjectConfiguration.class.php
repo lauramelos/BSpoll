@@ -12,9 +12,7 @@ class ProjectConfiguration extends sfProjectConfiguration
       'sfFormExtraPlugin',
       'sfDoctrineGuardPlugin',
       'sfLessPhpPlugin',
-      'sfImageTransformPlugin',
-      'sfDoctrineMooDooPlugin',
-      'sfMooDooGalleryPlugin'
+      'sfDoctrineMooDooPlugin'
     );
   }
 }
