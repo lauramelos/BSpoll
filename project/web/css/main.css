@@ -391,3 +391,57 @@ form fieldset > section p.info {
   color: #999999;
 }
 form fieldset > section > div { margin-bottom: 8px; }
+body {
+  font-size: 62.5%;
+  font-family: arial, helvetica;
+}
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+div#wrapper div#slider.home {
+  width: 768px;
+  height: 919px;
+  background: transparent url('../images/home.jpg') no-repeat;
+}
+div#wrapper div#slider.home a#logo {
+  display: block;
+  margin: 0px auto 0;
+  padding-top: 100px;
+  width: 489px;
+}
+div#wrapper div#slider.home a.start {
+  background-color: black;
+  color: white;
+  display: block;
+  font-size: 53px;
+  font-weight: bold;
+  line-height: 125px;
+  margin: 428px auto 0;
+  border-radius: 35px;
+  -moz-border-radius: 35px;
+  -webkit-border-radius: 35px;
+  text-align: center;
+  width: 490px;
+  height: 125px;
+}
+div#wrapper div#slider.home a.start span {
+  display: inline-block;
+  background: transparent url('../images/pool.a.png') no-repeat -150px -150px;
+  width: 27px;
+  height: 23px;
+  margin: 0 0 0 55px;
+}
+div#wrapper div#slider.home a.gotocontact {
+  background-color: black;
+  color: white;
+  display: block;
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 40px;
+  margin: 26px auto 0;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  text-align: center;
+  width: 300px;
+  height: 40px;
+}

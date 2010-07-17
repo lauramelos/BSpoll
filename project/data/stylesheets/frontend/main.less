@@ -1,12 +1,58 @@
 @import "../_commons/clear";
 @import "../_commons/interface.elements";
 
+body{
+  font-size: 62.5%;
+  font-family: arial, helvetica}
+a{
+  text-decoration: none;
+
+  :hover{text-decoration: underline;}
+  :active{}
+  :visited{}
+}
+
 div#wrapper{
   div#slider.home{
-    width:768px; height: 917px;
-    a#logo{}
-    a.start{}
-    a.gotocontact{}
+    width:768px; height: 919px;
+    background:transparent url('../images/home.jpg') no-repeat;
+    a#logo{
+      display:block;
+      margin: 0px auto 0;
+      padding-top: 100px;
+      width: 489px;
+    }
+    a.start{
+      background-color: black;
+      color: white;
+      display:block;
+      font-size: 53px;
+      font-weight: bold;
+      line-height: 125px;
+      margin: 428px auto 0;
+      /*padding: 35px 100px 30px 45px;*/
+      .border-radius(35px);
+      text-align:center;
+      width:490px; height:125px;
+      span{
+        display:inline-block;
+        background:transparent url('../images/pool.a.png') no-repeat -150px -150px;
+        width:27px; height:23px;
+        margin: 0 0 0 55px;
+      }
+    }
+    a.gotocontact{
+      background-color: black;
+      color: white;
+      display:block;
+      font-size: 23px;
+      font-weight: bold;
+      line-height: 40px;
+      margin: 26px auto 0;
+      .border-radius(20px);
+      text-align:center;
+      width:300px; height:40px;
+    }
   }
 }
 

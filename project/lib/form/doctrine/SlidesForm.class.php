@@ -12,5 +12,6 @@ class SlidesForm extends BaseSlidesForm
 {
   public function configure()
   {
+      unset($this['created_at'], $this['updated_at'], $this['client_poll_id']);
   }
 }
