@@ -26,6 +26,10 @@
  * @property enum $s18
  * @property enum $s19
  * @property enum $s20
+ * @property enum $s21
+ * @property enum $s22
+ * @property enum $s23
+ * @property enum $s24
  * @property enum $r1
  * @property enum $r2
  * @property enum $r3
@@ -58,6 +62,10 @@
  * @method enum    getS18()            Returns the current record's "s18" value
  * @method enum    getS19()            Returns the current record's "s19" value
  * @method enum    getS20()            Returns the current record's "s20" value
+ * @method enum    getS21()            Returns the current record's "s21" value
+ * @method enum    getS22()            Returns the current record's "s22" value
+ * @method enum    getS23()            Returns the current record's "s23" value
+ * @method enum    getS24()            Returns the current record's "s24" value
  * @method enum    getR1()             Returns the current record's "r1" value
  * @method enum    getR2()             Returns the current record's "r2" value
  * @method enum    getR3()             Returns the current record's "r3" value
@@ -89,6 +97,10 @@
  * @method Slides  setS18()            Sets the current record's "s18" value
  * @method Slides  setS19()            Sets the current record's "s19" value
  * @method Slides  setS20()            Sets the current record's "s20" value
+ * @method Slides  setS21()            Sets the current record's "s21" value
+ * @method Slides  setS22()            Sets the current record's "s22" value
+ * @method Slides  setS23()            Sets the current record's "s23" value
+ * @method Slides  setS24()            Sets the current record's "s24" value
  * @method Slides  setR1()             Sets the current record's "r1" value
  * @method Slides  setR2()             Sets the current record's "r2" value
  * @method Slides  setR3()             Sets the current record's "r3" value
@@ -458,6 +470,78 @@ abstract class BaseSlides extends sfDoctrineRecord
              'default' => 0,
              ));
         $this->hasColumn('s20', 'enum', null, array(
+             'type' => 'enum',
+             'values' => 
+             array(
+              0 => 0,
+              1 => 1,
+              2 => 2,
+              3 => 3,
+              4 => 4,
+              5 => 5,
+              6 => 6,
+              7 => 7,
+              8 => 8,
+              9 => 9,
+              10 => 10,
+             ),
+             'default' => 0,
+             ));
+        $this->hasColumn('s21', 'enum', null, array(
+             'type' => 'enum',
+             'values' => 
+             array(
+              0 => 0,
+              1 => 1,
+              2 => 2,
+              3 => 3,
+              4 => 4,
+              5 => 5,
+              6 => 6,
+              7 => 7,
+              8 => 8,
+              9 => 9,
+              10 => 10,
+             ),
+             'default' => 0,
+             ));
+        $this->hasColumn('s22', 'enum', null, array(
+             'type' => 'enum',
+             'values' => 
+             array(
+              0 => 0,
+              1 => 1,
+              2 => 2,
+              3 => 3,
+              4 => 4,
+              5 => 5,
+              6 => 6,
+              7 => 7,
+              8 => 8,
+              9 => 9,
+              10 => 10,
+             ),
+             'default' => 0,
+             ));
+        $this->hasColumn('s23', 'enum', null, array(
+             'type' => 'enum',
+             'values' => 
+             array(
+              0 => 0,
+              1 => 1,
+              2 => 2,
+              3 => 3,
+              4 => 4,
+              5 => 5,
+              6 => 6,
+              7 => 7,
+              8 => 8,
+              9 => 9,
+              10 => 10,
+             ),
+             'default' => 0,
+             ));
+        $this->hasColumn('s24', 'enum', null, array(
              'type' => 'enum',
              'values' => 
              array(

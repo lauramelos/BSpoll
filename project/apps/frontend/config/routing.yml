@@ -4,7 +4,13 @@
 # default rules
 homepage:
   url:   /
-  param: { module: default, action: index }
+  param: { module: poll, action: index }
+startSurvey:
+  url:   /survey
+  param: { module: poll, action: survey }
+contactForm:
+  url:   /contact
+  param: { module: poll, action: contact }
 
 #Rutas de autenticacion
 sf_guard_signin:
@@ -21,9 +27,9 @@ sf_guard_password:
 
 # generic rules
 # please, remove them by adding more specific rules
-default_index:
-  url:   /:module
-  param: { action: index }
+#default_index:
+#  url:   /:module
+#  param: { action: index }
 
-default:
-  url:   /:module/:action/*
+#default:
+#  url:   /:module/:action/*

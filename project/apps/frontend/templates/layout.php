@@ -10,18 +10,8 @@
     <?php include_javascripts() ?>
   </head>
   <body>
-  <div id="wrapper">
-
-      <section id="header">
-        <img id="logo" src="/images/logo.png" />
-        <div id="shine"></div>
-
-        <?php include_partial('sfMooDooStyleGuide/menu') ?>
-        <?php include_partial('sfMooDooStyleGuide/mini-panel') ?>
-      </section>
-       <?php echo $sf_content ?>
-       <?php include_partial('sfMooDooStyleGuide/footer') ?>
-
+    <div id="wrapper">
+          <?php echo $sf_content ?>
     </div>
   </body>
 </html>
