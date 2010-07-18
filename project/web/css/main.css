@@ -394,12 +394,18 @@ form fieldset > section > div { margin-bottom: 8px; }
 body {
   font-size: 62.5%;
   font-family: arial, helvetica;
+  overflow: hidden;
+  background-color: #4f4f4f;
 }
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
+div#wrapper {
+  width: 1024px;
+  margin: 0 auto;
+  background-color: #454545;
+}
 div#wrapper div#slider.home {
-  width: 768px;
-  height: 919px;
+  height: 1260px;
   background: transparent url('../images/home.jpg') no-repeat;
 }
 div#wrapper div#slider.home a#logo {
@@ -444,4 +450,110 @@ div#wrapper div#slider.home a.gotocontact {
   text-align: center;
   width: 300px;
   height: 40px;
+}
+#slider {
+  height: 100%;
+  overflow: hidden;
+}
+#slider #slider-container {
+  width: 1024px;
+  height: 1260px;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+#slider #slider-container #slider-wrapper {
+  height: 1260px;
+  width: 18630px;
+}
+#slider #slider-container #slider-wrapper > div.slide {
+  width: 1024px;
+  height: 1260px;
+  position: relative;
+  float: left;
+}
+#slider #slider-container #slider-wrapper > div.slide img.img-slide {
+  height: 1260px;
+  width: 1024px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#slider #slider-container #slider-wrapper > div.slide div.logo {
+  width: 321px;
+  height: 110px;
+  position: absolute;
+  right: 30px;
+  top: 52px;
+  z-index: 10;
+  background: transparent url('../images/slide-logo.65.png') no-repeat left top;
+}
+#slider div.box-placeholder {
+  position: absolute;
+  z-index: 100;
+  bottom: 20px;
+  width: 100%;
+}
+#slider div.box-placeholder div.box {
+  position: relative;
+  top: 0;
+  visibility: hidden;
+  width: 688px;
+  height: 133px;
+  background: transparent url('../images/pool.a.png') no-repeat left top;
+  margin: 0 auto;
+}
+#slider div.box-placeholder div.box h3 {
+  margin: 0;
+  height: 45px;
+  text-align: center;
+  color: #ffffff;
+  font: normal normal bold 17px/45px Helvetica, Arial;
+  text-transform: uppercase;
+}
+#slider div.box-placeholder div.box div.control-box {
+  margin: 8px;
+  padding: 0 10px;
+  height: 65px;
+}
+#slider div.box-placeholder div.box div.control-box .slider-buttons {
+  width: 65px;
+  height: 65px;
+  float: left;
+  background: transparent url('../images/pool.a.png') no-repeat 0px -200px;
+}
+#slider div.box-placeholder div.box div.control-box .slider-buttons:hover { cursor: pointer; }
+#slider div.box-placeholder div.box div.control-box .slider-btn-next {
+  float: right;
+  background-position: -65px -200px;
+}
+#slider div.box-placeholder div.box div.control-box div.rank h3 {
+  height: 30px;
+  text-align: center;
+  font: normal normal normal 23px/30px Helvetica, Arial;
+  text-transform: uppercase;
+}
+#slider div.box-placeholder div.box div.control-box div.rank div.rate-bar {
+  width: 400px;
+  height: 40px;
+  margin: 0 auto;
+}
+#slider div.box-placeholder div.box div.control-box div.rank div.rate-bar ul {
+  list-style: none;
+  height: 33px;
+}
+#slider div.box-placeholder div.box div.control-box div.rank div.rate-bar ul li {
+  width: 36px;
+  height: 33px;
+  float: left;
+  background: transparent url('../images/pool.a.png') no-repeat -50px -150px;
+  padding: 0 2px;
+  margin: 0;
+}
+#slider div.box-placeholder div.box div.control-box div.rank div.rate-bar ul li.active { background-position: 0px -150px; }
+#slider div.box-placeholder div.box div.control-box div.rank div.rate-bar ul li.selected { background-position: -200px -150px; }
+#slider div.box-placeholder div.box div.control-box div.rank div.rate-bar ul li.previous { background-position: -150px -150px; }
+#slider div.box-placeholder div.box div.control-box div.rank div.rate-bar ul li:hover {
+  cursor: pointer;
+  background-position: -100px -150px;
 }

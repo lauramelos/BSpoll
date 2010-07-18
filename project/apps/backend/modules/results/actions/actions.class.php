@@ -15,19 +15,6 @@ class resultsActions extends autoResultsActions
 {
   public function executeListExcel(sfWebRequest $request)
   {
-    /*
-      //Recuperamos los Filtros
-      $this->processSort();
-      $this->processFilters();
-      $this->filters = $this->getUser()->getAttributeHolder()->getAll('sf_admin/autorizaciones/filters');
-
-      //Hacemos la Consulta
-      $c = new Criteria();
-      $this->addSortCriteria($c);
-      $this->addFiltersCriteria($c);
-      $autorizaciones = AutorizacionesPeer::doSelect($c);
-*/
-      
       $results = Doctrine::getTable('slides')->findAll();
 
       //Creamos el archivo temporal de exportación
@@ -36,14 +23,6 @@ class resultsActions extends autoResultsActions
 
       //Cabecera - Cambienla por sus necesidades
       $row = "\"Id\",\"S1\",\"S2\",\"S3\",\"S4\",\"S5\",\"S6\",\"S7\",\"S8\",\"S9\",\"S10\",\"S11\",\"S12\",\"S13\",\"S14\",\"S15\",\"S16\",\"S17\",\"S18\",\"S19\",\"S20\",\"S21\",\"S22\",\"S23\",\"S24\",\"R1\",\"R2\",\"R3\",\"R4\",\"R5\",\"R6\",\"R7\",\"R8\",\"Client\",\"Client poll\",\"Created at\",\"Updated at\"\n";
-      
-      
-      
-      
-    /*  $row = "\"Codigo Ipad\","; $row .= "\"TimeId\",";
-      $row .= "\"Vendedor\","; $row .= "\"Motivo\",";
-      $row .= "\"Comentario\","; $row .= "\"Autorizado por\",";
-      $row .= "\"Deteriorado\","; $row .= "\"Cod. Articulo\"\n";*/
 
       fwrite($fh,$row);
 
@@ -58,15 +37,6 @@ class resultsActions extends autoResultsActions
                "\",\"".$result->getS24()."\",\"".$result->getR1()."\",\"".$result->getR2()."\",\"".$result->getR3()."\",\"".$result->getR4()."\",\"".$result->getR5().
                "\",\"".$result->getR6()."\",\"".$result->getR7()."\",\"".$result->getR8()."\",\"".$result->getClientId()."\",\"".$result->getClientPollId()."\",\"".$result->getCreatedAt()."\",\"".$result->getUpdatedAt()."\"\n";
 
-
-      /*$row = "\"".$aut->getCodigo()."\",";
-      $row .= "\"".$this->getSucursalName($aut->getIdSucursal())."\",";
-      $row .= "\"".$this->getVendedorName($aut->getIdVendedor())."\",";
-      $row .= "\"".$this->getMotivoName($aut->getIdMotivo())."\",";
-      $row .= "\"".$aut->getComentario()."\",";
-      $row .= "\"".$aut->getUsuario()."\",";
-      $row .= "\"".$aut->getDeteriorado()."\"";
-      $row .= "\"".$aut->getCodArticulo()."\"\n";*/
       fwrite($fh,$row);
       }
       fclose($fh);
@@ -87,8 +57,4 @@ class resultsActions extends autoResultsActions
 
       return sfView::NONE;
    }
-
-
-
-
 }

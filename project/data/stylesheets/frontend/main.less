@@ -3,7 +3,10 @@
 
 body{
   font-size: 62.5%;
-  font-family: arial, helvetica}
+  font-family: arial, helvetica;
+  overflow: hidden;
+  background-color: #4f4f4f;
+}
 a{
   text-decoration: none;
 
@@ -13,9 +16,12 @@ a{
 }
 
 div#wrapper{
+  width: 1024px;
+  margin: 0 auto;
+  background-color: #454545;
   div#slider.home{
-    width:768px; height: 919px;
-    background:transparent url('../images/home.jpg') no-repeat;
+      height: 1260px;
+     background:transparent url('../images/home.jpg') no-repeat;
     a#logo{
       display:block;
       margin: 0px auto 0;
@@ -52,6 +58,131 @@ div#wrapper{
       .border-radius(20px);
       text-align:center;
       width:300px; height:40px;
+    }
+  }
+}
+#slider {
+  height: 100%;
+  overflow: hidden;
+  #slider-container {
+    width: 1024px;
+    height: 1260px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+
+    #slider-wrapper {
+      height: 1260px;
+      width: 18630px;
+
+      > div.slide {
+        width: 1024px;
+        height: 1260px;
+        position: relative;
+        float: left;
+
+        img.img-slide {
+          height: 1260px;
+          width: 1024px;
+          position: absolute;
+          left: 0; top: 0;
+        }
+
+        div.logo {
+          width: 321px;
+          height: 110px;
+          position: absolute;
+          right: 30px; top: 52px;
+          z-index: 10;
+          background: transparent url('../images/slide-logo.65.png') no-repeat left top;
+        }
+      }
+    }
+  }
+
+  div.box-placeholder {
+    position: absolute;
+    z-index: 100;
+    bottom: 20px;
+    width: 100%;
+
+    div.box {
+      position: relative;
+      top: 0;
+      visibility: hidden;
+      width: 688px;
+      height: 133px;
+      background: transparent url('../images/pool.a.png') no-repeat left top;
+      margin: 0 auto;
+      h3 {
+        margin: 0;
+        height: 45px;
+        text-align: center;
+        color: #fff;
+        font: normal normal bold 17px/45px Helvetica, Arial;
+        text-transform: uppercase;
+      }
+
+
+      div.control-box {
+        margin: 8px;
+        padding: 0 10px;
+        height: 65px;
+        .slider-buttons {
+          width: 65px;
+          height: 65px;
+          float: left;
+          background: transparent url('../images/pool.a.png') no-repeat 0px -200px;
+
+          :hover {
+            cursor: pointer;
+          }
+        }
+        .slider-btn-next {
+          float: right;
+          background-position: -65px -200px;
+        }
+        div.rank {
+          h3 {
+            height: 30px;
+            text-align: center;
+            font: normal normal normal 23px/30px Helvetica, Arial;
+            text-transform: uppercase;
+          }
+
+          div.rate-bar {
+            width: 400px;
+            height: 40px;
+            margin: 0 auto;
+
+            ul {
+              list-style: none;
+              height: 33px;
+              li {
+                width: 36px;
+                height: 33px;
+                float: left;
+                background: transparent url('../images/pool.a.png') no-repeat -50px -150px;
+                padding: 0 2px;
+                margin: 0;
+              }
+              li.active {
+                background-position: 0px -150px;
+              }
+              li.selected {
+                background-position: -200px -150px;
+              }
+              li.previous {
+                background-position: -150px -150px;
+              }
+              li:hover {
+                cursor: pointer;
+                background-position: -100px -150px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
